@@ -7,9 +7,7 @@
 [License](#license)
 
 ## About
-This repository contains projects completed during my time at Nova Scotia Community College as a Full-Stack Development student. 
-
-See each project's README for general information on each project, technologies used, setup and illustrations of the finished project.
+This repository contains projects completed during my time at Nova Scotia Community College as a Full-Stack Development student. See each project's README for general information on each project, technologies used, setup and illustrations of the finished project.
 
 ## Projects
 🚍 transit-tracker-app (December 2021)
