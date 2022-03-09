@@ -1,4 +1,4 @@
-# School Projects
+# School Projects 📚
 
 ## Table of Contents
 [About](#about)\
