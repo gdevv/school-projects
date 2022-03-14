@@ -10,7 +10,7 @@
 This repository contains projects completed during my time at Nova Scotia Community College as a Full-Stack Development student. See each project's README for general information on each project, technologies used, setup and illustrations of the finished project.
 
 ## Projects
-🚢 battleship (October 2021)
+🚢 battleship (October 2021)\
 🚍 transit-tracker-app (December 2021)
 
 ## Author
