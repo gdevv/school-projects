@@ -11,8 +11,8 @@ This repository contains projects completed during my time at Nova Scotia Commun
 
 ## Projects
 🚢 battleship (October 2021)\
-🚍 transit-tracker-app (December 2021)
-📝 react-notes-app
+🚍 transit-tracker-app (December 2021)\
+📝 react-notes-app (February 2021)
 
 ## Author
 ### Georgie Deverill
