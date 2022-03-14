@@ -1,0 +1,39 @@
+{
+  "quotes": [
+    {
+      "key": 1,
+      "quote": "When you have a dream, you've got to grab it and never let it go.",
+      "author": "- Carol Burnett"
+    },
+    {
+      "key": 2,
+      "quote": "Keep your face always toward the sunshine, and shadows will fall behind you.",
+      "author": "- Walt Whitman"
+    },
+    {
+      "key": 3,
+      "quote": "There is nothing impossible to they who will try.",
+      "author": "- Alexander the Great"
+    },
+    {
+      "key": 4,
+      "quote": "Success is not final, failure is not fatal: it is the courage to continue that counts.",
+      "author": "- Winston Churchill"
+    },
+    {
+      "key": 5,
+      "quote": "You define your own life. Don't let other people write your script.",
+      "author": "- Oprah Winfrey"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
