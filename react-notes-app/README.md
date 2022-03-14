@@ -46,7 +46,8 @@ npx json-server --watch -p 3003 db.json
 
 ## Documentation
 Initial screen:\
-![Image](https://user-images.githubusercontent.com/72951538/158226223-1cdef784-6ef4-44c4-a4a2-94faced69be1.png)
+![image](https://user-images.githubusercontent.com/72951538/158279972-8406dbf2-f6f8-4f55-9b0e-46511df923e1.png)
+
 
 Note added:\
 ![Image](https://user-images.githubusercontent.com/72951538/158226223-1cdef784-6ef4-44c4-a4a2-94faced69be1.png)
