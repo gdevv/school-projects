@@ -26,7 +26,8 @@ Run the program.
 npm start
 ```
 ## Documentation
-![Image](https://user-images.githubusercontent.com/72951538/158186277-1fc4c1ff-b41f-4177-9712-bee7ff135fbf.png)
+Two users are in the chat:
+![image](https://user-images.githubusercontent.com/72951538/158426695-5d622323-3c74-4037-827c-071c3506c5dc.png)
 
 ## Author
 ### Georgie Deverill
