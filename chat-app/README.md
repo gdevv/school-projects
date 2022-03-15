@@ -32,8 +32,14 @@ npm start
 Go to localhost:3000.
 
 ## Documentation
+Example UI on user connect:\
+<img width="800px" src="https://user-images.githubusercontent.com/72951538/158488096-e30b559d-7e6e-498d-87d6-c0d2e52af618.png)" >
+
 Example UI with two users in the chat:\
 <img width="800px" src="https://user-images.githubusercontent.com/72951538/158426695-5d622323-3c74-4037-827c-071c3506c5dc.png" >
+
+Example UI on user disconnect:\
+<img width="800px" src="https://user-images.githubusercontent.com/72951538/158488168-17b440a2-1231-4b8e-8e08-96aa77f5766e.png" >
 
 ## Author
 ### Georgie Deverill
