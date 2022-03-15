@@ -27,7 +27,7 @@ npm start
 ```
 ## Documentation
 Two users are in the chat:
-![image](https://user-images.githubusercontent.com/72951538/158426695-5d622323-3c74-4037-827c-071c3506c5dc.png)
+<img width="400px" src="https://user-images.githubusercontent.com/72951538/158426695-5d622323-3c74-4037-827c-071c3506c5dc.png" >
 
 ## Author
 ### Georgie Deverill
