@@ -10,10 +10,14 @@
 ## About
 
 ### Overview
-For one of our assignments in Cross-Platform Development, we were tasked with using an npm package
-called `socket.io` to create a web-based chat application whereby users (clients) can communicate with other users (clients) with the messages being managed by a central location (server).
+For one of our assignments in Cross-Platform Development, we were tasked with using an npm package called `socket.io` to create a web-based chat application whereby users (clients) can communicate with other users (clients) with the messages being managed by a central location (server).
 
 ### Requirements
+* Display the number of currently connected clients. 
+* As clients connect or disconnect to the server, inform all clients of a change in the number of clients connected.
+* Modify the client such that a connection doesn't immediately occur, connection should instead happen when a `Connect` button is clicked on the UI.
+* Modify the client such that the client is disconneced programatically without closing the client tab or window. Disconnection should happen when a `Disconnect` button is clicked on the UI.
+* Add some UI functionality that will prevent the user from acting on the UI depending on whether the client is currently connected or not.
 
 ## Installation
 Install dependencies.
