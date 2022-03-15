@@ -29,6 +29,8 @@ Run the program.
 ```
 npm start
 ```
+Go to Localhost:3000
+
 ## Documentation
 Example UI with two users in the chat:\
 <img width="1000px" src="https://user-images.githubusercontent.com/72951538/158426695-5d622323-3c74-4037-827c-071c3506c5dc.png" >
