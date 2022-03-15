@@ -48,12 +48,11 @@ npx json-server --watch -p 3003 db.json
 Initial screen:\
 ![image](https://user-images.githubusercontent.com/72951538/158279972-8406dbf2-f6f8-4f55-9b0e-46511df923e1.png)
 
-
 Note added:\
-![Image](https://user-images.githubusercontent.com/72951538/158226223-1cdef784-6ef4-44c4-a4a2-94faced69be1.png)
+![image](https://user-images.githubusercontent.com/72951538/158280186-0e9156ee-4858-4e92-a415-b5b33144137d.png)
 
 Note deleted:\
-![image](https://user-images.githubusercontent.com/72951538/158226588-16515ac7-1512-4046-885e-eed687335a60.png)
+![image](https://user-images.githubusercontent.com/72951538/158280267-270bf665-74c1-4f62-8a1a-74af804413ce.png)
 
 ## Author
 
