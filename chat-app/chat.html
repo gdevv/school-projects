@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Chat App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background: rgb(131, 58, 180);
+        background: linear-gradient(
+          90deg,
+          rgba(131, 58, 180, 1) 0%,
+          rgba(253, 29, 29, 1) 50%,
+          rgba(252, 176, 69, 1) 100%
+        );
+        font-family: "Montserrat", sans-serif;
+      }
+      .container {
+        margin: auto;
+        width: 50%;
+        padding: 20px;
+        background-color: whitesmoke;
+        margin-bottom: 30px;
+        margin-top: 30px;
+        border-radius: 20px;
+      }
+      #chatDisplay p {
+        font-size: 20px;
+      }
+      .bottom-panel,
+      .bottom-panel input {
+        font-size: 20px;
+      }
+
+      .bottom-panel {
+        width: 50%;
+        padding: 20px;
+        border-radius: 20px;
+      }
+      #sendButton,
+      #connectButton,
+      #disconnectButton {
+        font-size: 20px;
+        font-family: "Montserrat", sans-serif;
+        background-color: #1e90ff;
+        color: white;
+      }
+    </style>
+    <script
+      src="https://cdn.socket.io/4.4.1/socket.io.min.js"
+      integrity="sha384-fKnu0iswBIqkjxrhQCTZ7qlLHOFEgNkRmK2vaO/LbTZSXdJfAu6ewRBdwHPhBo/H"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="total-container">
+      <div
+        class="container"
+        style="height: 250px; max-height: 250px; overflow-y: scroll"
+      >
+        <div id="chatDisplay"></div>
+      </div>
+      <div class="container bottom-panel">
+        <button type="button" class="btn btn-success" id="connectButton">
+          Connect
+        </button>
+        <button type="button" class="btn btn-danger" id="disconnectButton">
+          Disconnect
+        </button>
+        <p>Number of people in the chat: <span id="total-clients"></span></p>
+        <p>Current Server Time: <span id="time-display"></span></p>
+        <p>Your Name: <input type="text" id="name" /></p>
+        <p>
+          Your Message: <input type="text" id="message" style="width: 100%" />
+        </p>
+        <button type="button" class="btn btn-primary" id="sendButton">
+          Send Message
+        </button>
+      </div>
+    </div>
+    <script>
+      // Define our dom elements
+      const displayArea = document.querySelector("#chatDisplay");
+      const sendButton = document.querySelector("#sendButton");
+      const timeDisplay = document.querySelector("#time-display");
+      const nameTextbox = document.querySelector("#name");
+      const messageTextbox = document.querySelector("#message");
+      const numberClients = document.querySelector("#total-clients");
+      const connectButton = document.querySelector("#connectButton");
+      const disconnectButton = document.querySelector("#disconnectButton");
+
+      let socket = io({ autoConnect: false });
+
+      // Function established to reduce code
+      function updateCount(count) {
+        console.log(`Updating HTML client count to ${count}`);
+        numberClients.innerHTML = count;
+      }
+
+      function letMeConnect() {
+        // Establish connection with server
+        let socket = io({ autoConnect: true });
+
+        // Responds to clientConnect event
+        socket.on("clientsConnected", (count) => {
+          updateCount(count);
+        });
+
+        // Capture and log welcome message from the server
+        socket.on("welcome", (message) => {
+          const pTag = document.createElement("p");
+          pTag.innerHTML = message;
+          displayArea.innerHTML = `<p>${message}</p>`;
+        });
+
+        socket.on("time", (time) => {
+          timeDisplay.innerHTML = time;
+        });
+
+        socket.on("message", (message) => {
+          // Display the message in the chat
+          console.log(message.name);
+          console.log(message.message);
+          // Display in the display area
+          const pTag = document.createElement("p");
+          pTag.innerHTML = `[${message.name}] ${message.message}`;
+          displayArea.appendChild(pTag);
+        });
+
+        // Send a message to the server when that button is clicked
+        sendButton.addEventListener("click", () => {
+          if (nameTextbox.value.length === 0) {
+            alert("You must enter a name");
+          } else if (messageTextbox.value.length === 0) {
+            alert("You must enter a message");
+          } else {
+            socket.emit("message", {
+              name: nameTextbox.value,
+              message: messageTextbox.value,
+            });
+          }
+          // Clear out nameTextbox and messageTextbox upon submission
+          nameTextbox.value = "";
+          messageTextbox.value = "";
+        });
+
+        disconnectButton.addEventListener("click", () => {
+          console.log("Disconnect button clicked");
+          // Fires disconnect event client-side
+          socket.disconnect();
+
+          // Clear connected user count
+          numberClients.innerHTML = "";
+          // Disable disconnect button
+          disconnectButton.disabled = true;
+          connectButton.disabled = false;
+          // Disable sendMessage button
+          sendButton.disabled = true;
+          // Disable nameTextbox
+          nameTextbox.disabled = true;
+          // Diable messageTextbox
+          messageTextbox.disabled = true;
+          // Diable timeDisplay
+          timeDisplay.innerHTML = "";
+        });
+
+        socket.on("clientDisconnected", (count) => {
+          updateCount(count);
+        });
+      }
+
+      // Emit clientConnect event on connect btn click
+      connectButton.addEventListener("click", () => {
+        letMeConnect();
+        // Diable connect button
+        connectButton.disabled = true;
+        // Enable disconnect button
+        disconnectButton.disabled = false;
+        // Enable sendMessage button
+        sendButton.disabled = false;
+        // Enable nameTextbox
+        nameTextbox.disabled = false;
+        // Enable messageTextbox
+        messageTextbox.disabled = false;
+      });
+    </script>
+  </body>
+</html>
