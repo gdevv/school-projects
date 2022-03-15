@@ -29,7 +29,7 @@ Run the program.
 ```
 npm start
 ```
-Go to localhost:3000
+Go to localhost:3000.
 
 ## Documentation
 Example UI with two users in the chat:\
