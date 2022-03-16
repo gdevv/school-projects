@@ -17,8 +17,8 @@ This repository contains projects completed during my time at Nova Scotia Commun
 
 ## Author
 ### Georgie Deverill
-[GitHub](https://github.com/gdevv)\
-[LinkedIn](https://www.linkedin.com/in/georgie-deverill-044833121/)
+🐒 [GitHub](https://github.com/gdevv)\
+🐒 [LinkedIn](https://www.linkedin.com/in/georgie-deverill-044833121/)
 
 ## License
 Distributed under the [GNU General Public License version 3.0](https://www.gnu.org/licenses/gpl-3.0.en.html)
