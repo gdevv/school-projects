@@ -12,7 +12,7 @@
 
 ### Overview
 
-For our final assignment in Full-Stack Development, we were tasked with creating a React app of our choosing. I choose to create a note-taking app, as I'm constantly making lists and writing small notes to myself, so I thought it would be super practical!
+For our final assignment in Full-Stack Development, we were tasked with creating a React app of our choosing. I chose to create a note-taking app, as I'm constantly making lists and writing small notes to myself, so I thought it would be super useful.
 
 ### Requirements
 
