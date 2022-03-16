@@ -12,7 +12,7 @@
 
 ### Overview
 
-For our final assignment in Software Development, we developed a program that replicates the functionality of the game Battleship.
+For our final assignment in Software Development, we were tasked with creating a program in JavaScript that replicates the functionality of the game Battleship.
 
 ### Requirements
 
@@ -45,6 +45,7 @@ node battleship
 ```
 
 ## Documentation
+
 Beginning of a new game, prior to any missile shots:\
 ![Image](https://user-images.githubusercontent.com/72951538/158226223-1cdef784-6ef4-44c4-a4a2-94faced69be1.png)
 
@@ -64,8 +65,8 @@ Player loses the game:\
 
 ### Georgie Deverill
 
-[GitHub](https://github.com/gdevv)\
-[LinkedIn](https://www.linkedin.com/in/georgie-deverill-044833121/)
+🐒 [GitHub](https://github.com/gdevv)\
+🐒 [LinkedIn](https://www.linkedin.com/in/georgie-deverill-044833121/)
 
 ## License
 
