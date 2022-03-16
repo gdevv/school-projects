@@ -45,21 +45,22 @@ npx json-server --watch -p 3003 db.json
 ```
 
 ## Documentation
+
 Initial screen:\
-![image](https://user-images.githubusercontent.com/72951538/158279972-8406dbf2-f6f8-4f55-9b0e-46511df923e1.png)
+<img width="800px" src="https://user-images.githubusercontent.com/72951538/158279972-8406dbf2-f6f8-4f55-9b0e-46511df923e1.png" >
 
 Note added:\
-![image](https://user-images.githubusercontent.com/72951538/158280186-0e9156ee-4858-4e92-a415-b5b33144137d.png)
+<img width="800px" src="https://user-images.githubusercontent.com/72951538/158280186-0e9156ee-4858-4e92-a415-b5b33144137d.png" >
 
 Note deleted:\
-![image](https://user-images.githubusercontent.com/72951538/158280267-270bf665-74c1-4f62-8a1a-74af804413ce.png)
+<img width="800px" src="https://user-images.githubusercontent.com/72951538/158280267-270bf665-74c1-4f62-8a1a-74af804413ce.png" >
 
 ## Author
 
 ### Georgie Deverill
 
-[GitHub](https://github.com/gdevv)\
-[LinkedIn](https://www.linkedin.com/in/georgie-deverill-044833121/)
+🐒 [GitHub](https://github.com/gdevv)\
+🐒 [LinkedIn](https://www.linkedin.com/in/georgie-deverill-044833121/)
 
 ## License
 
