@@ -47,19 +47,14 @@ node battleship
 ## Documentation
 
 Beginning of a new game, prior to any missile shots:\
-![Image](https://user-images.githubusercontent.com/72951538/158226223-1cdef784-6ef4-44c4-a4a2-94faced69be1.png)
+<img width="800px" src="https://user-images.githubusercontent.com/72951538/158712245-e316c4d5-1bfe-44ae-b41c-994a61565128.png" >
+
 
 After an unsuccessful missile shot (a miss):\
-![Image](https://user-images.githubusercontent.com/72951538/158226223-1cdef784-6ef4-44c4-a4a2-94faced69be1.png)
+<img width="800px" src="https://user-images.githubusercontent.com/72951538/158712302-59144453-d809-448a-9b05-d729d1de237b.png" >
 
 After a successful missile shot (a Hit):\
-![image](https://user-images.githubusercontent.com/72951538/158226588-16515ac7-1512-4046-885e-eed687335a60.png)
-
-Player wins the game:\
-![image](https://user-images.githubusercontent.com/72951538/158226648-f47a2b7b-7da6-4073-8c24-fbcd5d1735df.png)
-
-Player loses the game:\
-![image](https://user-images.githubusercontent.com/72951538/158226679-a53c9864-a388-4b8a-bc40-83a429bca2da.png)
+<img width="800px" src="https://user-images.githubusercontent.com/72951538/158712322-c86bafc8-fadb-4125-aba6-c3891c4e0ee0.png" >
 
 ## Author
 
