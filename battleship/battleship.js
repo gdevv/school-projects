@@ -18,16 +18,16 @@ for (j = 0; j < arrOneDimensional.length; j++) {
 
 // Where the user sent missiles so far
 const arrBattleRecord = [
-  [" ", " ", " ", " ", " ", " ", " ", " ", " ", " "],
-  [" ", " ", " ", " ", " ", " ", " ", " ", " ", " "],
-  [" ", " ", " ", " ", " ", " ", " ", " ", " ", " "],
-  [" ", " ", " ", " ", " ", " ", " ", " ", " ", " "],
-  [" ", " ", " ", " ", " ", " ", " ", " ", " ", " "],
-  [" ", " ", " ", " ", " ", " ", " ", " ", " ", " "],
-  [" ", " ", " ", " ", " ", " ", " ", " ", " ", " "],
-  [" ", " ", " ", " ", " ", " ", " ", " ", " ", " "],
-  [" ", " ", " ", " ", " ", " ", " ", " ", " ", " "],
-  [" ", " ", " ", " ", " ", " ", " ", " ", " ", " "],
+  ["🌊", "🌊", "🌊", "🌊", "🌊", "🌊", "🌊", "🌊", "🌊", "🌊"],
+  ["🌊", "🌊", "🌊", "🌊", "🌊", "🌊", "🌊", "🌊", "🌊", "🌊"],
+  ["🌊", "🌊", "🌊", "🌊", "🌊", "🌊", "🌊", "🌊", "🌊", "🌊"],
+  ["🌊", "🌊", "🌊", "🌊", "🌊", "🌊", "🌊", "🌊", "🌊", "🌊"],
+  ["🌊", "🌊", "🌊", "🌊", "🌊", "🌊", "🌊", "🌊", "🌊", "🌊"],
+  ["🌊", "🌊", "🌊", "🌊", "🌊", "🌊", "🌊", "🌊", "🌊", "🌊"],
+  ["🌊", "🌊", "🌊", "🌊", "🌊", "🌊", "🌊", "🌊", "🌊", "🌊"],
+  ["🌊", "🌊", "🌊", "🌊", "🌊", "🌊", "🌊", "🌊", "🌊", "🌊"],
+  ["🌊", "🌊", "🌊", "🌊", "🌊", "🌊", "🌊", "🌊", "🌊", "🌊"],
+  ["🌊", "🌊", "🌊", "🌊", "🌊", "🌊", "🌊", "🌊", "🌊", "🌊"],
 ];
 
 // How many missiles
@@ -36,16 +36,39 @@ let numMisslesLeft = 30;
 // How many ship hits they got so far
 let numHits = 0;
 
-const arrLettersUpper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"];
-console.log("Let's play Battleship!");
-console.log("You have 30 missiles to fire to sink all five ships\n");
+const arrLettersUpper = [
+  "A ",
+  "B ",
+  "C ",
+  "D ",
+  "E ",
+  "F ",
+  "G ",
+  "H ",
+  "I ",
+  "J ",
+];
+console.log("\u001b[" + 31 + "m" + "LET'S PLAY BATTLESHIP!!!!" + "\u001b[0m\n");
+
+console.log(
+  "\u001b[" +
+    35 +
+    "m" +
+    "You have " +
+    numMisslesLeft +
+    " missiles to fire to sink all five ships\n" +
+    "\u001b[1m"
+);
+
 printBoard(arrBattleRecord);
-console.log("\n");
+console.log("");
 
 // While this is true, play the game
 while (numMisslesLeft > 0) {
   // Get user input
-  let currentCoords = rls.question("Choose your target (Ex. A1): ");
+  let currentCoords = rls.question(
+    "\u001b[" + 33 + "m" + "Choose your target (Ex. A1): " + "\u001b[1m"
+  );
   // Call function to convert currentCoords
   let convertedCoords = convertCoords(currentCoords);
 
@@ -56,31 +79,53 @@ while (numMisslesLeft > 0) {
   // Check if an attempt is a hit or not
   if (checkForHit(convertedRow, convertedCol)) {
     numHits++;
-    console.log("HIT!!!!!");
+    console.log("\n\u001b[" + 32 + "m" + "HIT!!! 😃" + "\u001b[0m\n");
   } else {
-    console.log("Miss");
+    console.log("\n\u001b[" + 31 + "m" + "MISS 😫" + "\u001b[0m\n");
   }
   // Check if they sunk all the ships
   if (sunkAllShips()) {
     printBoard(arrBattleRecord);
-    console.log("YOU SANK MY ENTIRE FLEET!");
-    console.log("You won, congratulations!");
+    console.log(
+      "\u001b[" + 32 + "m" + "\nYOU SANK MY ENTIRE FLEET!" + "\u001b[0m"
+    );
+    console.log(
+      "\u001b[" + 32 + "m" + "\nYou won, congratulations!" + "\u001b[0m"
+    );
     break;
   }
 
   // Reduce the number of missles
   numMisslesLeft--;
-  console.log("You have", numMisslesLeft, " missiles remaining");
+  console.log(
+    "\u001b[" +
+      35 +
+      "m" +
+      "You have " +
+      numMisslesLeft +
+      " missiles remaining" +
+      "\u001b[1m\n"
+  );
   // Call printBoard function to print updated battleRecord
   printBoard(arrBattleRecord);
-  console.log("\n");
+  console.log("");
 }
 
 if (numMisslesLeft == 0) {
-  console.log("You have", numMisslesLeft, "missiles remaining");
-  console.log("GAME OVER.");
-  console.log("You had", numHits, "of 17 hits, but didn't sink all the ships.");
-  console.log("Better luck next time.");
+  console.log(
+    "\n\u001b[" + 31 + "m" + "You have",
+    numMisslesLeft,
+    "missiles remaining" + "\u001b[0m\n"
+  );
+  console.log("\n\u001b[" + 31 + "m" + "GAME OVER." + "\u001b[0m\n");
+  console.log(
+    "\n\u001b[" + 31 + "m" + "You had",
+    numHits,
+    "of 17 hits, but didn't sink all the ships." + "\u001b[0m\n"
+  );
+  console.log(
+    "\n\u001b[" + 31 + "m" + "Better luck next time." + "\u001b[0m\n"
+  );
 }
 
 // FUNCTIONS
@@ -119,9 +164,9 @@ function checkForHit(row, col) {
   if (arrShipLocations[row][col] == 1) {
     // Update battlemap to show hit
     didHit = true;
-    arrBattleRecord[row][col] = "X";
+    arrBattleRecord[row][col] = "💥";
   } else {
-    arrBattleRecord[row][col] = "O";
+    arrBattleRecord[row][col] = "🚫";
   }
   return didHit;
 }

@@ -12,7 +12,7 @@
 
 ### Overview
 
-For our final assignment in Software Development, we were tasked with creating a program in JavaScript that replicates the functionality of the game Battleship.
+For our final assignment in Software Development, we were tasked with creating a program in JavaScript that replicates the functionality of the game Battleship. 
 
 ### Requirements
 
